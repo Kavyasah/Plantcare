@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantCare AI - Disease Detection System</title>
+    <meta name="description"
+        content="AI-Powered Plant Disease Detection using Transfer Learning with MobileNetV2. A professional platform for farmers, gardeners, and researchers.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <i class='bx bx-leaf text-primary'></i>
+                <span>PlantCare <b>AI</b></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#how-it-works">Workflow</a>
+                <a href="#features">Features</a>
+                <a href="#team">Team</a>
+                <a href="#faq">FAQ</a>
+            </nav>
+            <a href="#upload-section" class="btn btn-primary">Try Now</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span>95%+ Accuracy Model Live</span>
+                </div>
+                <h1 class="hero-title">AI-Powered<br><span class="text-primary">Plant Disease Detection</span></h1>
+                <p class="hero-subtitle">Protect your crops instantly. Upload a leaf image and let our advanced
+                    MobileNetV2 neural network diagnose up to 38 different plant conditions with high accuracy.</p>
+                <div class="hero-actions" id="upload-section">
+                    <label for="leaf-upload" class="upload-area">
+                        <i class='bx bx-cloud-upload upload-icon'></i>
+                        <span class="upload-text">Drop a leaf image or click to <b>Upload</b></span>
+                        <input type="file" id="leaf-upload" accept="image/*" class="d-none"
+                            onchange="window.location.href='result.html';">
+                    </label>
+                </div>
+                <p class="small-text mt-2"><i class='bx bxs-shield-alt-2'></i> Secure, local testing block. No data
+                    logged.</p>
+            </div>
+            <div class="hero-graphic">
+                <div class="mockup-frame">
+                    <!-- Placeholder graphic or AI scanning effect -->
+                    <div class="scan-effect"></div>
+                    <img src="mint.png" alt="Scanning Plant Leaf" class="hero-image">
+                    <div class="overlay-card card-1 float-anim">
+                        <div class="card-icon"><i class='bx bx-check-double'></i></div>
+                        <div class="card-text">
+                            <h4>Apple Scab</h4>
+                            <p>Confidence: 98.4%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Project -->
+    <section class="section bg-light" id="about">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Behind The <span class="text-primary">Science</span></h2>
+                <p>Understanding the core engine driving our diagnostic precision</p>
+            </div>
+            <div class="grid-2">
+                <div class="about-text">
+                    <h3>Transfer Learning with <span class="highlight">MobileNetV2</span></h3>
+                    <p>PlantCare AI utilizes state-of-the-art Transfer Learning mechanisms. We adopted
+                        <strong>MobileNetV2</strong> as our base architectural framework due to its incredible
+                        efficiency on mobile devices without sacrificing deep diagnostic accuracy.
+                    </p>
+                    <ul class="check-list">
+                        <li><i class='bx bxs-check-circle'></i> <strong>Massive Knowledge Engine:</strong> Trained on
+                            the New Plant Diseases Dataset containing over 87,000 expertly verified images.</li>
+                        <li><i class='bx bxs-check-circle'></i> <strong>Broad Coverage:</strong> Capable of categorizing
+                            inputs into 38 distinct classes including Apple, Corn, Grape, Potato, Tomato, and healthy
+                            variants.</li>
+                        <li><i class='bx bxs-check-circle'></i> <strong>Why AI in Agriculture?</strong> Early detection
+                            minimizes crop loss, reduces unnecessary pesticide use, and helps global food security
+                            margins to stabilize dynamically.</li>
+                    </ul>
+                </div>
+                <div class="about-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-num">87K+</div>
+                        <div class="stat-label">Training Images</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">38</div>
+                        <div class="stat-label">Plant Classes</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num">95%</div>
+                        <div class="stat-label">Validation Accuracy</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-num"><i class='bx bxs-bolt'></i></div>
+                        <div class="stat-label">Real-Time Speed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works (Visual Workflow) -->
+    <section class="section" id="how-it-works">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2><span class="text-primary">Workflow</span> In Action</h2>
+                <p>Three simple steps to obtain comprehensive agricultural diagnostics</p>
+            </div>
+            <div class="workflow-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class='bx bx-image-add'></i>
+                    </div>
+                    <h3>Upload Leaf Image</h3>
+                    <p>Take a clear photo of the affected plant leaf. Good lighting yields the best prognostic data.</p>
+                </div>
+                <i class='bx bx-chevron-right step-arrow'></i>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon pulse">
+                        <i class='bx bx-brain'></i>
+                    </div>
+                    <h3>AI Analyzes Image</h3>
+                    <p>Our deep learning MobileNetV2 model processes the pixels extracting vital disease features.</p>
+                </div>
+                <i class='bx bx-chevron-right step-arrow'></i>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class='bx bx-file-find'></i>
+                    </div>
+                    <h3>Result Displayed</h3>
+                    <p>Instantly receive the specific disease condition along with expert recommended treatment
+                        protocols.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section bg-dark text-white" id="features">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Our Core <span class="text-primary">Features</span></h2>
+                <p>Designed for scalability, precision, and ease-of-use.</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-box">
+                    <i class='bx bx-target-lock feature-icon'></i>
+                    <h4>High Accuracy</h4>
+                    <p>Backed by deep neural networks ensuring pinpoint diagnostic precision for early intervention.</p>
+                </div>
+                <div class="feature-box">
+                    <i class='bx bx-timer feature-icon'></i>
+                    <h4>Fast Prediction</h4>
+                    <p>Optimized algorithms deliver instantaneous actionable results right on your screen.</p>
+                </div>
+                <div class="feature-box">
+                    <i class='bx bx-radar feature-icon'></i>
+                    <h4>Real-Time Results</h4>
+                    <p>Zero processing queues; get your agricultural query matched in milliseconds.</p>
+                </div>
+                <div class="feature-box">
+                    <i class='bx bx-mobile feature-icon'></i>
+                    <h4>Mobile Friendly</h4>
+                    <p>Fully responsive platform designed to operate seamlessly whether in the farmhouse or deep in the
+                        field.</p>
+                </div>
+                <div class="feature-box">
+                    <i class='bx bx-line-chart feature-icon'></i>
+                    <h4>Scalable System</h4>
+                    <p>Architecture built to handle large farms and expanding future datasets with minimal refactoring.
+                    </p>
+                </div>
+                <div class="feature-box">
+                    <i class='bx bx-server feature-icon'></i>
+                    <h4>Cloud Ready</h4>
+                    <p>Integrated REST endpoints making cross-platform applications integration effortless.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases & Tech Stack -->
+    <section class="section" id="use-cases">
+        <div class="container grid-2">
+            <!-- Use Cases -->
+            <div class="use-case-container">
+                <h2>Ideal <span class="text-primary">Use Cases</span></h2>
+                <div class="use-case-list">
+                    <div class="use-case-item">
+                        <div class="use-case-icon"><i class='bx bxs-farm'></i></div>
+                        <div class="use-case-content">
+                            <h4>Smart Farm Monitoring Systems</h4>
+                            <p>Integrate our API natively into camera drones or field sensors to track orchard health
+                                systematically.</p>
+                        </div>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-icon"><i class='bx bx-mobile-alt'></i></div>
+                        <div class="use-case-content">
+                            <h4>Mobile App for Gardeners</h4>
+                            <p>The perfect backbone for consumer-facing apps allowing home gardeners to cure their
+                                backyard plants.</p>
+                        </div>
+                    </div>
+                    <div class="use-case-item">
+                        <div class="use-case-icon"><i class='bx bxs-graduation'></i></div>
+                        <div class="use-case-content">
+                            <h4>Agricultural Education</h4>
+                            <p>An excellent visual tool assisting students and researchers in pathology classifications
+                                and case studies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Technology Stack -->
+            <div class="tech-stack-container">
+                <h2>Our <span class="text-primary">Tech Stack</span></h2>
+                <p>A mix of top-tier foundational web standards and Python machine learning ecosystems.</p>
+                <div class="tech-grid">
+                    <div class="tech-badge"><i class='bx bxl-python'></i> Python</div>
+                    <div class="tech-badge"><i class='bx bx-brain'></i> TensorFlow / Keras</div>
+                    <div class="tech-badge"><i class='bx bx-layer'></i> MobileNetV2</div>
+                    <div class="tech-badge"><i class='bx bxs-flask'></i> Flask</div>
+                    <div class="tech-badge"><i class='bx bxl-html5'></i> HTML5</div>
+                    <div class="tech-badge"><i class='bx bxl-css3'></i> CSS3</div>
+                    <div class="tech-badge"><i class='bx bxl-javascript'></i> JavaScript</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section bg-light" id="team">
+        <div class="container text-center">
+            <div class="section-header">
+                <h2>Meet the <span class="text-primary">Visionaries</span></h2>
+                <p>The minds engineering the future of plant health diagnostics.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">KJ</div>
+                    <h4>Kavya Jain</h4>
+                    <p class="role">Team Lead</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">KN</div>
+                    <h4>Kavya Narayan Sharma</h4>
+                    <p class="role">Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">KS</div>
+                    <h4>Kavya Sahu</h4>
+                    <p class="role">Member</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">KY</div>
+                    <h4>Khushi Yadav</h4>
+                    <p class="role">Member</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container faq-container">
+            <div class="section-header text-center">
+                <h2>Frequently Asked <span class="text-primary">Questions</span></h2>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>What is Transfer Learning and why use it?</h4>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Transfer learning involves taking a model trained on a large dataset and fine-tuning it for a
+                            specific task. We use it to adapt MobileNetV2, an architecture originally designed for
+                            general image classification, specifically for recognizing 38 types of plant diseases with
+                            minimal computational overhead.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>How fast are the prediction results?</h4>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Our optimized Flask backend, coupled with lightweight MobileNetV2 weights, typically returns
+                            a diagnosis in under 500 milliseconds depending on your connection speed.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>Do I need a special camera to capture leaves?</h4>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>No, a standard smartphone camera is sufficient. However, ensure the leaf is the main focus,
+                            well-lit, and placed against a neutral background if possible to achieve the highest ML
+                            confidence.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h4>Is the data I upload stored on your servers?</h4>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>No. For this demonstration system, your images are processed dynamically and immediately
+                            discarded from the volatile memory to ensure privacy and security, unless you explicitly opt
+                            into the global registry.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-dark text-white" id="contact">
+        <div class="container grid-2 contact-grid">
+            <div class="contact-info">
+                <h2>Let's Grow <span class="text-primary">Together</span></h2>
+                <p>Have questions about the algorithm, potential partnerships, or API access? Reach out to our team.</p>
+                <div class="social-links mt-4">
+                    <a href="#" class="social-icon"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-github'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bxl-twitter'></i></a>
+                    <a href="#" class="social-icon"><i class='bx bx-envelope'></i></a>
+                </div>
+            </div>
+            <div class="contact-form-card">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="How can we help?" required></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 PlantCare AI. Built by Kavya Jain, Kavya Narayan Sharma, Kavya Sahu, Khushi Yadav.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

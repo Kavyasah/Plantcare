@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Complete - PlantCare AI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- BoxIcons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="bg-light pb-5">
+
+    <!-- Minimal Header -->
+    <header class="navbar minimal-nav">
+        <div class="container nav-content text-center">
+            <a href="index.html" class="logo">
+                <i class='bx bx-leaf text-primary'></i>
+                <span>PlantCare <b>AI</b></span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Top Section -->
+    <section class="result-header text-center fade-in-up">
+        <div class="container">
+            <h1 class="result-title">Analysis Complete</h1>
+            <p class="result-subtitle">Here’s what our neural network found</p>
+        </div>
+    </section>
+
+    <!-- Main Section (Two-Column Card Layout) -->
+    <section class="container fade-in-up delay-1">
+        <div class="result-grid">
+
+            <!-- Left Card: Uploaded Image -->
+            <div class="result-card image-card">
+                <div class="card-header-simple">
+                    <h4>Uploaded Image</h4>
+                </div>
+                <div class="uploaded-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&q=80&w=800"
+                        alt="Uploaded Corn Leaf" class="scanned-image">
+
+                    <!-- Scanning overlay visualization -->
+                    <div class="scan-line"></div>
+                    <div class="scan-corners">
+                        <span class="tl"></span><span class="tr"></span>
+                        <span class="bl"></span><span class="br"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card: Prediction Result -->
+            <div class="result-card analysis-card">
+
+                <div class="badge-alert red-alert">
+                    <i class='bx bxs-error-circle'></i>
+                    <span>Disease Detected</span>
+                </div>
+
+                <div class="diagnosis-header">
+                    <div class="diagnosis-icon red-icon">
+                        <i class='bx bx-x'></i>
+                    </div>
+                    <div class="diagnosis-info">
+                        <p class="label">Condition</p>
+                        <h2 class="disease-name">Common Rust</h2>
+                        <p class="plant-type">Plant Type: <strong>Corn (Maize)</strong></p>
+                    </div>
+                </div>
+
+                <div class="confidence-box">
+                    <div class="conf-header">
+                        <span>AI Confidence Score</span>
+                        <span class="conf-value">96.4%</span>
+                    </div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill" style="width: 96.4%;"></div>
+                    </div>
+                </div>
+
+                <div class="severity-box mt-3">
+                    <span class="label">Severity Level</span>
+                    <div class="severity-meter">
+                        <div class="meter-segment low"></div>
+                        <div class="meter-segment medium active"></div>
+                        <div class="meter-segment high"></div>
+                        <div class="meter-segment critical"></div>
+                    </div>
+                    <span class="severity-text">Moderate / Action Required</span>
+                </div>
+
+                <!-- Recommended Actions Box -->
+                <div class="recommendation-box red-bg mt-4">
+                    <h4><i class='bx bx-clipboard'></i> Recommended Actions</h4>
+                    <ul class="action-list">
+                        <li><i class='bx bx-check'></i> Remove and destroy severely affected leaves immediately.</li>
+                        <li><i class='bx bx-check'></i> Avoid overhead watering to reduce leaf wetness time.</li>
+                        <li><i class='bx bx-check'></i> Apply appropriate fungicide (e.g., mancozeb or pyraclostrobin)
+                            as per local agricultural guidelines.</li>
+                        <li><i class='bx bx-check'></i> Monitor surrounding plants closely for the next 7-14 days.</li>
+                    </ul>
+                </div>
+
+                <div class="result-actions mt-4">
+                    <button class="btn btn-outline" onclick="window.print()"><i class='bx bxs-file-pdf'></i> Download
+                        Report</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Buttons -->
+        <div class="bottom-nav-actions text-center mt-5 fade-in-up delay-2">
+            <a href="index.html#upload-section" class="btn btn-primary btn-lg mr-3"><i class='bx bx-scan'></i> Analyze
+                Another Image</a>
+            <a href="index.html" class="btn btn-secondary btn-lg">Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container text-center">
+            <p>&copy; 2026 PlantCare AI. Built by Kavya Jain, Kavya Narayan Sharma, Kavya Sahu, Khushi Yadav.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
